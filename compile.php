@@ -1,5 +1,15 @@
 <?php 
-
+/*
+ * upload.php points here to have the uploaded .tex files compiled and returned
+ * to the user. 
+ *
+ * Eventually:
+ * - Add support for parsing the uploaded for write18 commands so 
+ * shell code can't bee executed by the uploaded .tex file.
+ * - Have the code executed in a chroot.
+ *
+ *
+ */
 $string = '';
 
 /*
@@ -26,7 +36,7 @@ $string .= " <p>
 print $filename;
 
 $string .= "
-	<a href='$filename.pdf'>Compiled file</a>
+	<a href='$filename.pdf'>Compiled pdf</a>
 	";
 
 print $string;
